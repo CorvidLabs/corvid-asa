@@ -1,0 +1,62 @@
+[tasks]
+dev = "cargo run -p merlin-cli"
+test = "cargo test --workspace --lib --bins"
+lint = "cargo clippy --workspace -- -D warnings"
+build = "cargo build --release -p merlin-cli"
+spec-check = "fledge spec check"
+
+[lanes.verify]
+steps = ["lint", "test", "spec-check"]
+
+[merlin]
+verify_before_complete = true
+max_retries = 3
+
+# Set one of these API keys in .env or your shell to enable the matching
+# provider. OPENROUTER_API_KEY alone unlocks Claude/Gemini/Llama/DeepSeek.
+
+[merlin.providers.openrouter]
+type = "openai"
+api_key_env = "OPENROUTER_API_KEY"
+model = "anthropic/claude-sonnet-4-6"
+base_url = "https://openrouter.ai/api/v1"
+max_context_tokens = 200000
+
+[merlin.providers.claude]
+type = "anthropic"
+api_key_env = "ANTHROPIC_API_KEY"
+model = "claude-sonnet-4-6"
+max_context_tokens = 200000
+
+[merlin.providers.openai]
+type = "openai"
+api_key_env = "OPENAI_API_KEY"
+model = "gpt-4.1-mini"
+max_context_tokens = 128000
+
+[merlin.providers.ollama]
+type = "ollama"
+api_key_env = "OLLAMA_API_KEY"
+model = "qwen3-coder:480b"
+base_url = "https://api.ollama.com"
+max_context_tokens = 131072
+
+[merlin.session]
+ttl_days = 30
+enabled = true
+
+# ----------------------------------------------------------------------
+# Optional: multi-agent / autonomous mode. Off by default. Uncomment the
+# block below to enable named agent personas, councils, delegation, work
+# tasks, and scheduling. See docs/book/src/autonomous.md for the full
+# config schema. The `--agent <name>` CLI flag, the Discord / Telegram
+# bridges, and `merlin --daemon` all require `enabled = true` here.
+# ----------------------------------------------------------------------
+# [merlin.autonomous]
+# enabled = true
+#
+# [merlin.autonomous.agents.builder]
+# display_name = "Builder"
+# provider = "claude"
+# persona = "You are a backend builder. You implement features, fix bugs, and write tests."
+# skills = ["coding", "testing", "git"]
