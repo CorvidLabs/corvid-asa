@@ -1,20 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Not Found</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>404 Not Found - Corvid Labs</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 1rem;
+  }
+  main {
+    max-width: 600px;
+  }
+  h1 {
+    font-size: 3rem;
+    color: var(--accent-divroc);
+    margin-bottom: 1rem;
+  }
+  p {
+    font-size: 1.25rem;
+  }
+  a {
+    color: var(--accent-vip);
+    text-decoration: underline;
+  }
+  a:hover {
+    color: var(--accent-legend);
+  }
+</style>
 </head>
 <body>
-    <header>
-        <h1>404 - Page Not Found</h1>
-    </header>
-    
-    <main>
-        <p>The page you're looking for doesn't exist.</p>
-        <a href="/">Return to Home</a>
-    </main>
+<main>
+  <h1>404 - Page Not Found</h1>
+  <p>Sorry, the page you requested could not be found.</p>
+  <p><a href="/corvid-asa/">Go back to the homepage</a></p>
+</main>
 </body>
 </html>

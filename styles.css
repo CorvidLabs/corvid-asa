@@ -1,60 +1,119 @@
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f5f5f5;
-    color: #333;
+/* Corvid Labs Dark Theme and Tier Styling */
+
+:root {
+  --bg-color: #121214;
+  --text-color: #e0e0e0;
+  --font-sans: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-mono: 'Fira Mono', 'Courier New', Courier, monospace;
+
+  /* Accent colors for tiers */
+  --accent-holder: #4A90E2; /* cool blue */
+  --accent-supporter: #FFC107; /* amber */
+  --accent-vip: #9B59B6; /* violet */
+  --accent-elite: #1ABC9C; /* teal */
+  --accent-legend: #FFD700; /* gold */
+  --accent-divroc: #DC143C; /* crimson/red */
 }
 
-header {
-    text-align: center;
-    margin-bottom: 30px;
-    padding: 20px;
-    background-color: #2c3e50;
-    color: white;
-    border-radius: 10px;
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-sans);
+  margin: 0;
+  padding: 0 1rem;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2 {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
 }
 
 h1 {
-    margin: 0;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: 1rem;
+  color: var(--accent-divroc);
 }
 
 h2 {
-    color: #2980b9;
-    border-bottom: 2px solid #2980b9;
-    padding-bottom: 5px;
+  font-size: 1.75rem;
+  border-bottom: 2px solid currentColor;
+  padding-bottom: 0.25rem;
+  margin-top: 1.5rem;
 }
 
-.tier {
-    background-color: white;
-    margin-bottom: 20px;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.holder { 
-    border-left: 5px solid #3498db; 
-}
-
-.supporter { 
-    border-left: 5px solid #f39c12; 
-}
-
-.vip { 
-    border-left: 5px solid #9b59b6; 
+p {
+  font-size: 1rem;
 }
 
 ul {
-    padding-left: 20px;
+  list-style-type: disc;
+  padding-left: 1.25rem;
+}
+
+/* Tier section base styling */
+main {
+  max-width: 900px;
+  margin: 1rem auto 2rem auto;
+  flex-grow: 1;
+}
+
+section {
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.7);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.9);
+}
+
+/* Accent colors for each tier */
+.tier-holder {
+  border-left: 6px solid var(--accent-holder);
+}
+.tier-supporter {
+  border-left: 6px solid var(--accent-supporter);
+}
+.tier-vip {
+  border-left: 6px solid var(--accent-vip);
+}
+.tier-elite {
+  border-left: 6px solid var(--accent-elite);
+}
+.tier-legend {
+  border-left: 6px solid var(--accent-legend);
+}
+.tier-divroc {
+  border-left: 6px solid var(--accent-divroc);
 }
 
 footer {
-    text-align: center;
-    margin-top: 30px;
-    padding: 20px;
-    font-size: 0.9em;
-    color: #7f8c8d;
+  text-align: center;
+  padding: 1rem 0;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--text-color);
+  border-top: 1px solid rgba(255,255,255,0.1);
+  margin-top: auto;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
+  main {
+    margin: 1rem 0.5rem 2rem 0.5rem;
+  }
 }

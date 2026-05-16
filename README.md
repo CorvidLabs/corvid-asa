@@ -9,11 +9,9 @@ This repository contains the source code for the Corvid ASA Holder Role Tiers & 
 - `img/favicon.svg` - Website favicon
 - `404.html` - Custom 404 error page
 - `README.md` - This file
-- `CNAME` - Custom domain configuration (optional)
 - `robots.txt` - Search engine indexing rules
 - `sitemap.xml` - Sitemap for search engines
 - `.gitignore` - Files to exclude from Git
-- `package.json` - Project metadata and scripts
 
 ## How to Deploy to GitHub Pages
 
@@ -32,15 +30,13 @@ You can customize:
 - The content by editing `index.html`
 - The styling by modifying `styles.css`
 - The favicon by replacing `img/favicon.svg`
-- The domain by editing the `CNAME` file
 
 ## Local Development
 
-You can run the site locally by installing Node.js and running:
+You can run the site locally by running:
 
 ```
-npm install
-npm start
+fledge run serve
 ```
 
 This will start a local server for testing.

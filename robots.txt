@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
-Sitemap: /sitemap.xml
+Sitemap: https://corvidlabs.github.io/corvid-asa/sitemap.xml
