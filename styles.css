@@ -6,13 +6,13 @@
   --font-sans: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   --font-mono: 'Fira Mono', 'Courier New', Courier, monospace;
 
-  /* Accent colors for tiers */
-  --accent-holder: #4A90E2; /* cool blue */
-  --accent-supporter: #FFC107; /* amber */
-  --accent-vip: #9B59B6; /* violet */
-  --accent-elite: #1ABC9C; /* teal */
-  --accent-legend: #FFD700; /* gold */
-  --accent-divroc: #DC143C; /* crimson/red */
+  /* Accent colors for tiers - Corvid themed palette */
+  --accent-holder: #5BA3E8; /* cool sky blue - entry tier */
+  --accent-supporter: #B87333; /* copper - warm, supportive */
+  --accent-vip: #8E5DBE; /* raven-feather purple */
+  --accent-elite: #1ABC9C; /* iridescent teal */
+  --accent-legend: #D4AF37; /* antique gold */
+  --accent-divroc: #00A878; /* deep iridescent emerald - premium */
 }
 
 body {
