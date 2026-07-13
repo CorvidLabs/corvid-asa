@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "CHG-0001-adopt-specsync-5-0-1-and-trust-1-0-0-governance-for-corvid-asa",
+  "slug": "adopt-specsync-5-0-1-and-trust-1-0-0-governance-for-corvid-asa",
+  "title": "Adopt SpecSync 5.0.1 and Trust 1.0.0 governance for Corvid ASA",
+  "description": "Adopt SpecSync 5.0.1 and Trust 1.0.0 governance for Corvid ASA",
+  "kind": "migration",
+  "state": "accepted",
+  "base_commit": "bda14bf64a68960e8603390b4b2b0bd2dee13465",
+  "created_at": 1783886921,
+  "updated_at": 1783948160,
+  "affected_specs": [],
+  "affected_paths": [
+    ".github/",
+    ".specsync/",
+    ".trust.toml",
+    ".augur.toml",
+    ".attest.json",
+    "AGENTS.md",
+    "fledge.toml"
+  ],
+  "no_spec_change": true,
+  "no_spec_change_rationale": "This migration adds governance configuration and CI orchestration without changing static-site content or behavior; future meaningful site changes must add or update canonical specifications.",
+  "acceptance_criteria": [
+    "SpecSync advisory coverage passes; all four agent integrations are installed; Trust doctor passes; deterministic validation confirms every required HTML, CSS, metadata, and favicon artifact is non-empty; hosted Trust passes on pull requests and main pushes."
+  ],
+  "selected_artifacts": [
+    "context",
+    "research",
+    "design",
+    "plan",
+    "tasks",
+    "testing",
+    "docs"
+  ],
+  "dependencies": [],
+  "answers": {
+    "architecture_risk": "yes",
+    "public_contract": "no"
+  }
+}
