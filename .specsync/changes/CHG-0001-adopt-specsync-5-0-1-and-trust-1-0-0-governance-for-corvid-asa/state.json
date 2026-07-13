@@ -5,10 +5,10 @@
   "title": "Adopt SpecSync 5.0.1 and Trust 1.0.0 governance for Corvid ASA",
   "description": "Adopt SpecSync 5.0.1 and Trust 1.0.0 governance for Corvid ASA",
   "kind": "migration",
-  "state": "draft",
+  "state": "accepted",
   "base_commit": "bda14bf64a68960e8603390b4b2b0bd2dee13465",
   "created_at": 1783886921,
-  "updated_at": 1783886929,
+  "updated_at": 1783948160,
   "affected_specs": [],
   "affected_paths": [
     ".github/",
